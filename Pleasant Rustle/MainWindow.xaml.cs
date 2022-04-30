@@ -20,7 +20,7 @@ namespace Pleasant_Rustle
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        public PleasantRustleMainWindowMainWindow()
         {
             InitializeComponent();
         }
