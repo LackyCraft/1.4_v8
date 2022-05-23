@@ -68,6 +68,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="EditAgentsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PleasantRustleMainWindowMainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -133,6 +137,9 @@
     <Compile Include="DataBase\Supplier.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="EditAgentsWindow.xaml.cs">
+      <DependentUpon>EditAgentsWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PleasantRustleMainWindowMainWindow.xaml.cs">
       <DependentUpon>PleasantRustleMainWindowMainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -187,9 +194,141 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Resource Include="Image\nullable.png" />
+    <Resource Include="Image\Agents\agent_1.png" />
+    <Resource Include="Image\Agents\agent_10.png" />
+    <Resource Include="Image\Agents\agent_100.png" />
+    <Resource Include="Image\Agents\agent_101.png" />
+    <Resource Include="Image\Agents\agent_102.png" />
+    <Resource Include="Image\Agents\agent_103.png" />
+    <Resource Include="Image\Agents\agent_104.png" />
+    <Resource Include="Image\Agents\agent_105.png" />
+    <Resource Include="Image\Agents\agent_106.png" />
+    <Resource Include="Image\Agents\agent_107.png" />
+    <Resource Include="Image\Agents\agent_108.png" />
+    <Resource Include="Image\Agents\agent_109.png" />
+    <Resource Include="Image\Agents\agent_11.png" />
+    <Resource Include="Image\Agents\agent_110.png" />
+    <Resource Include="Image\Agents\agent_111.png" />
+    <Resource Include="Image\Agents\agent_112.png" />
+    <Resource Include="Image\Agents\agent_113.png" />
+    <Resource Include="Image\Agents\agent_114.png" />
+    <Resource Include="Image\Agents\agent_115.png" />
+    <Resource Include="Image\Agents\agent_116.png" />
+    <Resource Include="Image\Agents\agent_117.png" />
+    <Resource Include="Image\Agents\agent_118.png" />
+    <Resource Include="Image\Agents\agent_119.png" />
+    <Resource Include="Image\Agents\agent_12.png" />
+    <Resource Include="Image\Agents\agent_120.png" />
+    <Resource Include="Image\Agents\agent_121.png" />
+    <Resource Include="Image\Agents\agent_122.png" />
+    <Resource Include="Image\Agents\agent_123.png" />
+    <Resource Include="Image\Agents\agent_124.png" />
+    <Resource Include="Image\Agents\agent_125.png" />
+    <Resource Include="Image\Agents\agent_126.png" />
+    <Resource Include="Image\Agents\agent_127.png" />
+    <Resource Include="Image\Agents\agent_128.png" />
+    <Resource Include="Image\Agents\agent_129.png" />
+    <Resource Include="Image\Agents\agent_13.png" />
+    <Resource Include="Image\Agents\agent_130.png" />
+    <Resource Include="Image\Agents\agent_14.png" />
+    <Resource Include="Image\Agents\agent_15.png" />
+    <Resource Include="Image\Agents\agent_16.png" />
+    <Resource Include="Image\Agents\agent_17.png" />
+    <Resource Include="Image\Agents\agent_18.png" />
+    <Resource Include="Image\Agents\agent_19.png" />
+    <Resource Include="Image\Agents\agent_2.png" />
+    <Resource Include="Image\Agents\agent_20.png" />
+    <Resource Include="Image\Agents\agent_21.png" />
+    <Resource Include="Image\Agents\agent_22.png" />
+    <Resource Include="Image\Agents\agent_23.png" />
+    <Resource Include="Image\Agents\agent_24.png" />
+    <Resource Include="Image\Agents\agent_25.png" />
+    <Resource Include="Image\Agents\agent_26.png" />
+    <Resource Include="Image\Agents\agent_27.png" />
+    <Resource Include="Image\Agents\agent_28.png" />
+    <Resource Include="Image\Agents\agent_29.png" />
+    <Resource Include="Image\Agents\agent_3.png" />
+    <Resource Include="Image\Agents\agent_30.png" />
+    <Resource Include="Image\Agents\agent_31.png" />
+    <Resource Include="Image\Agents\agent_32.png" />
+    <Resource Include="Image\Agents\agent_33.png" />
+    <Resource Include="Image\Agents\agent_34.png" />
+    <Resource Include="Image\Agents\agent_35.png" />
+    <Resource Include="Image\Agents\agent_36.png" />
+    <Resource Include="Image\Agents\agent_37.png" />
+    <Resource Include="Image\Agents\agent_38.png" />
+    <Resource Include="Image\Agents\agent_39.png" />
+    <Resource Include="Image\Agents\agent_4.png" />
+    <Resource Include="Image\Agents\agent_40.png" />
+    <Resource Include="Image\Agents\agent_41.png" />
+    <Resource Include="Image\Agents\agent_42.png" />
+    <Resource Include="Image\Agents\agent_43.png" />
+    <Resource Include="Image\Agents\agent_44.png" />
+    <Resource Include="Image\Agents\agent_45.png" />
+    <Resource Include="Image\Agents\agent_46.png" />
+    <Resource Include="Image\Agents\agent_47.png" />
+    <Resource Include="Image\Agents\agent_48.png" />
+    <Resource Include="Image\Agents\agent_49.png" />
+    <Resource Include="Image\Agents\agent_5.png" />
+    <Resource Include="Image\Agents\agent_50.png" />
+    <Resource Include="Image\Agents\agent_51.png" />
+    <Resource Include="Image\Agents\agent_52.png" />
+    <Resource Include="Image\Agents\agent_53.png" />
+    <Resource Include="Image\Agents\agent_54.png" />
+    <Resource Include="Image\Agents\agent_55.png" />
+    <Resource Include="Image\Agents\agent_56.png" />
+    <Resource Include="Image\Agents\agent_57.png" />
+    <Resource Include="Image\Agents\agent_58.png" />
+    <Resource Include="Image\Agents\agent_59.png" />
+    <Resource Include="Image\Agents\agent_6.png" />
+    <Resource Include="Image\Agents\agent_60.png" />
+    <Resource Include="Image\Agents\agent_61.png" />
+    <Resource Include="Image\Agents\agent_62.png" />
+    <Resource Include="Image\Agents\agent_63.png" />
+    <Resource Include="Image\Agents\agent_64.png" />
+    <Resource Include="Image\Agents\agent_65.png" />
+    <Resource Include="Image\Agents\agent_66.png" />
+    <Resource Include="Image\Agents\agent_67.png" />
+    <Resource Include="Image\Agents\agent_68.png" />
+    <Resource Include="Image\Agents\agent_69.png" />
+    <Resource Include="Image\Agents\agent_7.png" />
+    <Resource Include="Image\Agents\agent_70.png" />
+    <Resource Include="Image\Agents\agent_71.png" />
+    <Resource Include="Image\Agents\agent_72.png" />
+    <Resource Include="Image\Agents\agent_73.png" />
+    <Resource Include="Image\Agents\agent_74.png" />
+    <Resource Include="Image\Agents\agent_75.png" />
+    <Resource Include="Image\Agents\agent_76.png" />
+    <Resource Include="Image\Agents\agent_77.png" />
+    <Resource Include="Image\Agents\agent_78.png" />
+    <Resource Include="Image\Agents\agent_79.png" />
+    <Resource Include="Image\Agents\agent_8.png" />
+    <Resource Include="Image\Agents\agent_80.png" />
+    <Resource Include="Image\Agents\agent_81.png" />
+    <Resource Include="Image\Agents\agent_82.png" />
+    <Resource Include="Image\Agents\agent_83.png" />
+    <Resource Include="Image\Agents\agent_84.png" />
+    <Resource Include="Image\Agents\agent_85.png" />
+    <Resource Include="Image\Agents\agent_86.png" />
+    <Resource Include="Image\Agents\agent_87.png" />
+    <Resource Include="Image\Agents\agent_88.png" />
+    <Resource Include="Image\Agents\agent_89.png" />
+    <Resource Include="Image\Agents\agent_9.png" />
+    <Resource Include="Image\Agents\agent_90.png" />
+    <Resource Include="Image\Agents\agent_91.png" />
+    <Resource Include="Image\Agents\agent_92.png" />
+    <Resource Include="Image\Agents\agent_93.png" />
+    <Resource Include="Image\Agents\agent_94.png" />
+    <Resource Include="Image\Agents\agent_95.png" />
+    <Resource Include="Image\Agents\agent_96.png" />
+    <Resource Include="Image\Agents\agent_97.png" />
+    <Resource Include="Image\Agents\agent_98.png" />
+    <Resource Include="Image\Agents\agent_99.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

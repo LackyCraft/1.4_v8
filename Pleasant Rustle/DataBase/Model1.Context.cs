@@ -23,6 +23,9 @@ namespace Pleasant_Rustle.DataBase
             if (_DBcontext == null)
             {
                 _DBcontext = new Entities();
+                _DBcontext.Configuration.AutoDetectChangesEnabled = false;
+                _DBcontext.ChangeTracker.DetectChanges();
+                _DBcontext.SaveChangesAsync();
             }
             return _DBcontext;
         }

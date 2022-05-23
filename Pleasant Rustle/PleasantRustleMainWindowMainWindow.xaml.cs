@@ -27,8 +27,8 @@ namespace Pleasant_Rustle
         //Лист, который будет для сортировки датагрида в реальном времени
         private List<DataBase.AgentList> gridAgentslList;
 
-        //Размер одной страницы 15 - строк
-        private int PageSize = 15;
+        //Размер одной страницы 10 - строк
+        private int PageSize = 10;
 
         public PleasantRustleMainWindowMainWindow()
         {
@@ -73,7 +73,12 @@ namespace Pleasant_Rustle
         //Функция обновляет лист, который является эталонной копией БД. Вызывается исключительно в дочерних страницах
         public void updateAllAgentlList()
         {
-            AllAgentList = DataBase.Entities.GetContext().AgentList.ToList();
+            DataGridAgentList.ItemsSource = null;
+            DataBase.Entities.GetContext().SaveChanges();
+
+            //AllAgentList
+            DataGridAgentList.ItemsSource = DataBase.Entities.GetContext().AgentList.ToList();
+            //DataGridAgentList.ItemsSource = ;
             drawDataGrid();
         }
 
@@ -264,9 +269,9 @@ namespace Pleasant_Rustle
         {
             if (DataGridAgentList.SelectedItems.Count > 0)
             {
-               // EditWindow ownedWindow = new EditWindow(DataBase.Entities.GetContext().Agent.Find((DataGridAgentList.SelectedItems[0] as DataBase.AgentList).ID));
-               // ownedWindow.Owner = this;
-               // ownedWindow.Show();
+                EditAgentsWindow ownedWindow = new EditAgentsWindow(DataBase.Entities.GetContext().Agent.Find((DataGridAgentList.SelectedItems[0] as DataBase.AgentList).ID));
+                ownedWindow.Owner = this;
+                ownedWindow.Show();
             }
             else
             {
