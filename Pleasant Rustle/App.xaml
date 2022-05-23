@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:Pleasant_Rustle"
              StartupUri="PleasantRustleMainWindowMainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary Source="Dictionary1.xaml"/>
     </Application.Resources>
 </Application>
