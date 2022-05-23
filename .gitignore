@@ -9,6 +9,7 @@
 *.user
 *.userosscache
 *.sln.docstates
+/Pleasant Rustle/App.config
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -354,3 +355,4 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+/Pleasant Rustle/App.config
