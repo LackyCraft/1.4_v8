@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Pleasant_Rustle"
         mc:Ignorable="d"
-        Title="Приятный шелест" Height="450" Width="800"
+        Title="Приятный шелест" Height="450" Width="860"
+        MinHeight="450" MinWidth="860"
         Icon="Icon\Приятный шелест.png">
     <Grid>
         <Grid.RowDefinitions>
@@ -21,27 +22,27 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <Grid Grid.ColumnSpan="2" Background="{StaticResource pink}"/>
+            <Grid Grid.ColumnSpan="2" Background="{StaticResource dop}"/>
             <Image Source="Icon\Приятный шелест.png"  HorizontalAlignment="Center" VerticalAlignment="Center" Height="90" Grid.Column="0"/>
 
-            <TextBlock Text="Главное меню" Grid.Column="1" FontFamily="Century Gothic" FontWeight="Bold" FontSize="36" Margin="15,0,0,0" Foreground="{StaticResource fiol}"/>
+            <TextBlock Text="Главное меню" Grid.Column="1" FontFamily="Century Gothic" FontWeight="Bold" FontSize="36" Margin="15,0,0,0" Foreground="{StaticResource act}"/>
 
             <StackPanel Grid.Column="1" Orientation="Horizontal" Height="30" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,19,-9,0">
-                <Button Foreground="{StaticResource pink}" Click="clickButtonAddNewProcent" HorizontalAlignment="Right"  Margin="0,0,15,0"  Width="150" Content="Добавить" Background="{StaticResource fiol}" Height="30" VerticalAlignment="Center" FontFamily="Century Gothic" FontWeight="Bold"/>
+                <Button Foreground="{StaticResource dop}" Click="clickButtonAddNewProcent" HorizontalAlignment="Right"  Margin="0,0,15,0"  Width="150" Content="Добавить" Background="{StaticResource act}" Height="30" VerticalAlignment="Center" FontFamily="Century Gothic" FontWeight="Bold"/>
             </StackPanel>
 
             <StackPanel Grid.Column="1" Orientation="Horizontal" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,0,5">
 
-                <TextBlock VerticalAlignment="Center" Text="Поиск: " FontFamily="Century Gothic" Foreground="{StaticResource fiol}"/>
+                <TextBlock VerticalAlignment="Center" Text="Поиск: " FontFamily="Century Gothic" Foreground="{StaticResource act}"/>
                 <TextBox TextChanged="textChangedTextBoxSearch"  x:Name="TextBoxSearch" Margin="5,0,0,0" Width="100" TextAlignment="Center" FontFamily="Century Gothic"/>
 
-                <TextBlock Margin="5,0,0,0"  VerticalAlignment="Center" Text="Сортировка: " FontFamily="Century Gothic" Foreground="{StaticResource fiol}"/>
+                <TextBlock Margin="5,0,0,0"  VerticalAlignment="Center" Text="Сортировка: " FontFamily="Century Gothic" Foreground="{StaticResource act}"/>
                 <ComboBox x:Name="ComboBoxSort" Margin="5,0,0,0" Width="155" FontFamily="Century Gothic" SelectionChanged="selectionChangedComboBox"/>
 
-                <TextBlock Margin="5,0,0,0"  VerticalAlignment="Center"  Text="Фильтрация: " FontFamily="Century Gothic" Foreground="{StaticResource fiol}"/>
+                <TextBlock Margin="5,0,0,0"  VerticalAlignment="Center"  Text="Фильтрация: " FontFamily="Century Gothic" Foreground="{StaticResource act}"/>
                 <ComboBox x:Name="ComboBoxFilter" Margin="5,0,0,0" Width="90" DisplayMemberPath="Title" SelectedValuePath="ID" SelectionChanged="selectionChangedComboBox"  FontFamily="Century Gothic"/>
 
-                <Button  Foreground="{StaticResource pink}" Background="{StaticResource fiol}" Click="clickButtonClear" Content="Сбросить фильтры" Width="150"  Margin="15,0,5,0" FontFamily="Century Gothic" FontSize="11" BorderBrush="{StaticResource fiol}" FontWeight="Bold" />
+                <Button  Foreground="{StaticResource dop}" Background="{StaticResource act}" Click="clickButtonClear" Content="Сбросить фильтры" Width="150"  Margin="15,0,5,0" FontFamily="Century Gothic" FontSize="11" BorderBrush="{StaticResource act}" FontWeight="Bold" />
 
 
 
@@ -55,8 +56,8 @@
         <DataGrid
             SelectionChanged="selectionChangedDataGridAgentList"
             FontFamily="Century Gothic" x:Name="DataGridAgentList"  HeadersVisibility="None" AutoGenerateColumns="False" Grid.Row="2" Margin="5" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="2" FontWeight="Bold">
-            
-             <!-- Для реализацции выделения цвета -->
+
+            <!-- Для реализацции выделения цвета -->
             <DataGrid.CellStyle>
                 <Style TargetType="{x:Type DataGridCell}">
                     <Style.Triggers>
@@ -108,11 +109,11 @@
             <Grid Grid.Column="0">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Изменить приоритет на:" FontFamily="Century Gothic" VerticalAlignment="Center"/>
-                    <TextBox Background="{StaticResource pink}" Foreground="{StaticResource fiol}"  TextChanged="textChangedTextBoxEditProcent" IsEnabled="False" Margin="15,0,0,0" Text="1" x:Name="TextBoxEditPrioritet" Width="60" Height="30" VerticalAlignment="Center" TextAlignment="Center" FontFamily="Century Gothic" FontSize="16"/>
-                    <Button IsEnabled="False" Margin="15,0,0,0" Background="{StaticResource fiol}" Foreground="{StaticResource pink}"  Click="clickButtonEditMinCount" x:Name="ButtonEditMinCount" Width="100" Content="OK" Height="30" VerticalAlignment="Center" FontFamily="Century Gothic" FontWeight="Bold"/>
+                    <TextBox Background="{StaticResource dop}" Foreground="{StaticResource act}"  TextChanged="textChangedTextBoxEditProcent" IsEnabled="False" Margin="15,0,0,0" Text="1" x:Name="TextBoxEditPrioritet" Width="60" Height="30" VerticalAlignment="Center" TextAlignment="Center" FontFamily="Century Gothic" FontSize="16"/>
+                    <Button IsEnabled="False" Margin="15,0,0,0" Background="{StaticResource act}" Foreground="{StaticResource dop}"  Click="clickButtonEditMinCount" x:Name="ButtonEditMinCount" Width="100" Content="OK" Height="30" VerticalAlignment="Center" FontFamily="Century Gothic" FontWeight="Bold"/>
                 </StackPanel>
 
-                <Button Foreground="{StaticResource pink}" HorizontalAlignment="Right" Click="clickButtonEditNewProcent" Margin="0,0,15,0"  Width="150" Content="Редактировать" Background="{StaticResource fiol}" Height="30" VerticalAlignment="Center" FontFamily="Century Gothic" FontWeight="Bold"/>
+                <Button Foreground="{StaticResource dop}" HorizontalAlignment="Right" Click="clickButtonEditNewProcent" Margin="0,0,15,0"  Width="150" Content="Редактировать" Background="{StaticResource act}" Height="30" VerticalAlignment="Center" FontFamily="Century Gothic" FontWeight="Bold"/>
 
             </Grid>
 
@@ -124,14 +125,14 @@
                 </Grid.RowDefinitions>
                 <StackPanel Orientation="Horizontal" x:Name="StackPanelPageList" Grid.Row="0" HorizontalAlignment="Center"/>
 
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="1">
-                    <Button Background="{StaticResource fiol}" Foreground="{StaticResource pink}" Click="clickButtonPage" x:Name="ButtonBackPage" Content="←" Width="30" Height="30" FontFamily="Century Gothic"/>
-                    <TextBox Foreground="{StaticResource fiol}"  IsEnabled="False" x:Name="TextBoxPageNumber" Text="1" Height="30" FontSize="20" FontWeight="Bold" FontFamily="Century Gothic" TextAlignment="Center" VerticalAlignment="Center" BorderBrush="{x:Null}"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="1" Margin="0,0,0,1">
+                    <Button Margin="10,0,0,0"  Background="{StaticResource act}" Foreground="{StaticResource dop}" Click="clickButtonPage" x:Name="ButtonBackPage" Content="←" Width="30" FontFamily="Century Gothic"/>
+                    <TextBox Foreground="{StaticResource act}"  IsEnabled="False" x:Name="TextBoxPageNumber" Text="1" Height="30" FontSize="20" FontWeight="Bold" FontFamily="Century Gothic" TextAlignment="Center" VerticalAlignment="Center" BorderBrush="{x:Null}"/>
 
 
-                    <TextBox Foreground="{StaticResource fiol}" IsEnabled="False" Text="/" Height="30" FontSize="20" FontWeight="Bold" FontFamily="Century Gothic" TextAlignment="Center" VerticalAlignment="Center" BorderBrush="{x:Null}"/>
-                    <TextBox Foreground="{StaticResource fiol}" IsEnabled="False" x:Name="TextBoxCountPage" Text="11" Height="30" FontSize="20" FontWeight="Bold" FontFamily="Century Gothic" TextAlignment="Center" VerticalAlignment="Center" BorderBrush="{x:Null}"/>
-                    <Button Background="{StaticResource fiol}" Foreground="{StaticResource pink}" Click="clickButtonPage" x:Name="ButtonNextPage"  Content="→" Width="30" Height="30" FontFamily="Century Gothic"/>
+                    <TextBox Foreground="{StaticResource act}" IsEnabled="False" Text="/" Height="30" FontSize="20" FontWeight="Bold" FontFamily="Century Gothic" TextAlignment="Center" VerticalAlignment="Center" BorderBrush="{x:Null}"/>
+                    <TextBox Foreground="{StaticResource act}" IsEnabled="False" x:Name="TextBoxCountPage" Text="11" Height="30" FontSize="20" FontWeight="Bold" FontFamily="Century Gothic" TextAlignment="Center" VerticalAlignment="Center" BorderBrush="{x:Null}"/>
+                    <Button Background="{StaticResource act}" Foreground="{StaticResource dop}" Click="clickButtonPage" x:Name="ButtonNextPage"  Content="→" Width="30" FontFamily="Century Gothic"/>
                 </StackPanel>
             </Grid>
 

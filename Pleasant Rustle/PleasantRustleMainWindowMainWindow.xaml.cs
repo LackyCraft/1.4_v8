@@ -132,7 +132,7 @@ namespace Pleasant_Rustle
                 Button pageButton = new Button();
                 pageButton.Content = i.ToString();
                 pageButton.Background = null;
-                pageButton.Foreground = (Brush)Application.Current.MainWindow.FindResource("fiol");
+                pageButton.Foreground = (Brush)Application.Current.MainWindow.FindResource("dop");
                 pageButton.BorderBrush = null;
                 if (i.ToString() == TextBoxPageNumber.Text)
                 {
@@ -254,9 +254,9 @@ namespace Pleasant_Rustle
         //Добавление нового агента
         private void clickButtonAddNewProcent(object sender, RoutedEventArgs e)
         {
-            AddAgentWindow ownedWindow = new AddAgentWindow();
-            ownedWindow.Owner = this;
-            ownedWindow.Show();
+            //AddAgentWindow ownedWindow = new AddAgentWindow();
+            //ownedWindow.Owner = this;
+            //ownedWindow.Show();
         }
 
         //Редактирование выделенного материала
@@ -264,9 +264,9 @@ namespace Pleasant_Rustle
         {
             if (DataGridAgentList.SelectedItems.Count > 0)
             {
-                EditWindow ownedWindow = new EditWindow(DataBase.Entities.GetContext().Agent.Find((DataGridAgentList.SelectedItems[0] as DataBase.AgentList).ID));
-                ownedWindow.Owner = this;
-                ownedWindow.Show();
+               // EditWindow ownedWindow = new EditWindow(DataBase.Entities.GetContext().Agent.Find((DataGridAgentList.SelectedItems[0] as DataBase.AgentList).ID));
+               // ownedWindow.Owner = this;
+               // ownedWindow.Show();
             }
             else
             {

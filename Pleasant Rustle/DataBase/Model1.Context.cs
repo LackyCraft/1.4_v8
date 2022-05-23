@@ -15,6 +15,18 @@ namespace Pleasant_Rustle.DataBase
     
     public partial class Entities : DbContext
     {
+
+        private static Entities _DBcontext;
+
+        public static Entities GetContext()
+        {
+            if (_DBcontext == null)
+            {
+                _DBcontext = new Entities();
+            }
+            return _DBcontext;
+        }
+
         public Entities()
             : base("name=Entities")
         {
